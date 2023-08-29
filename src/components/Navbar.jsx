@@ -8,7 +8,7 @@ export const Navbar = () => {
       <ul className="flex space-x-8 capitalize text-[15px]">
         {navigation.map((item, index) => {
           return (
-            <li className="text-white hover:text-blue-500 cursor-pointer" key={index}>
+            <li className="text-white hover:text-purple-700 cursor-pointer" key={index}>
               <Link
                 to={item.href}
                 activeClass="active"
