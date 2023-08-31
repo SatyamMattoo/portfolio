@@ -1,6 +1,15 @@
 //  icons
 import {FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
-import {BiLogoCPlusPlus,BiLogoTailwindCss,BiLogoNodejs,BiLogoMongodb, BiLogoSass, BiLogoRedux, BiLogoReact, BiLogoJavascript, BiLogoFirebase} from "react-icons/bi"
+import {
+  javascript,
+  html,
+  css,
+  reactjs,
+  redux,
+  tailwind,
+  nodejs,
+  git,
+} from '../assets';
 
 // navigation
 export const navigation = [
@@ -48,32 +57,38 @@ export const social = [
 
 export const skills = [
   {
-    image:<BiLogoReact/>,
+    name: 'HTML 5',
+    icon: html,
   },
   {
-    image: <BiLogoTailwindCss/>,
+    name: 'CSS 3',
+    icon: css,
   },
   {
-    image: <BiLogoSass/>,
+    name: 'JavaScript',
+    icon: javascript,
   },
   {
-    image: <BiLogoJavascript/>,
+    name: 'React JS',
+    icon: reactjs,
   },
   {
-    image: <BiLogoNodejs/>,
+    name: 'Redux Toolkit',
+    icon: redux,
   },
   {
-    image: <BiLogoMongodb/>,
+    name: 'Tailwind CSS',
+    icon: tailwind,
   },
   {
-    image: <BiLogoRedux/>,
+    name: 'Node JS',
+    icon: nodejs,
   },
   {
-    image: <BiLogoFirebase/>,
+    name: 'git',
+    icon: git,
   },
-  {
-    image: <BiLogoCPlusPlus/>,
-  },
+
 ];
 
 export const sections = [

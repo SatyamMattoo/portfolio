@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.class{
+  color:  rgb(217 70 239);
+}
+
 @layer base {
   body {
     @apply font-body  leading-6 bg-gray-200;
