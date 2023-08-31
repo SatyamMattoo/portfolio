@@ -1,19 +1,29 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Sphere } from "@react-three/drei/core";
 import { MeshDistortMaterial } from "@react-three/drei/core";
-import {my} from "../assets";
-import { Arrow } from "./Arrow";
+import { useInViewAnimation } from "../hooks/useInViewAnimation";
+import { boxVariant } from "../utils/BoxVarient";
+import { my } from "../assets";
 
 export const About = () => {
+  const { ref, control } = useInViewAnimation();
+
   return (
     <section
       id="about"
-      className="h-screen bg-primary w-full flex items-center flex-col"
+      className="h-screen bg-gradient w-full flex items-center flex-col"
     >
-      <div className="container mx-auto h-full flex flex-col justify-center">
-        <div className="flex items-center h-full">
+      <div className="container mx-auto h-full flex flex-col justify-center  mb-10">
+        <motion.div
+          className="flex items-center h-full"
+          ref={ref}
+          variants={boxVariant}
+          initial="hidden"
+          animate={control}
+        >
           <div className=" items-center justify-center w-1/2 h-1/2 relative hidden md:flex">
             <img src={my} className="z-10 absolute" />
             <Canvas className="z-1 absolute">
@@ -47,7 +57,7 @@ export const About = () => {
               wonders and craft poetic lines of code. 🌟🎨📝
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
