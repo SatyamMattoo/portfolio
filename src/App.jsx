@@ -7,19 +7,22 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
+import { Toaster } from "react-hot-toast";
+
 
 const App = () => {
-  return (
-    <div>
+  return (<>
       <Header />
       <Hero />
       <About />
       <Portfolio />
       <Skills />
       <Projects />
-      <Contact/>
+      <Contact />
       <Footer />
-    </div>
+      <Toaster/>
+  </>
+
   );
 };
 

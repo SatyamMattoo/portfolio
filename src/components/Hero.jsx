@@ -6,7 +6,7 @@ import { Sphere } from "@react-three/drei/core";
 import { MeshDistortMaterial } from "@react-three/drei/core";
 import { motion } from "framer-motion";
 import { boxVariant } from "../utils/BoxVarient";
-import { useInViewAnimation} from "../hooks/useInViewAnimation";
+import { useInViewAnimation } from "../hooks/useInViewAnimation";
 
 export const Hero = () => {
   const { ref, control } = useInViewAnimation();

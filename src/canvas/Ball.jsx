@@ -8,7 +8,7 @@ import {
   useTexture,
 } from "@react-three/drei";
 
-const Ball = ({img}) => {
+const Ball = ({ img }) => {
   const [decal] = useTexture([img]);
 
   return (

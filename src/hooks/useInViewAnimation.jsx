@@ -14,5 +14,5 @@ export const useInViewAnimation = () => {
     }
   }, [control, inView]);
 
-  return {control,ref};
+  return { control, ref };
 };

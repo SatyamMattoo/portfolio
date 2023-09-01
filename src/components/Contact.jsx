@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { boxVariant } from "../utils/BoxVarient";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
 import emailjs from "@emailjs/browser";
-
+import { toast } from "react-hot-toast";
 
 export const Contact = () => {
   const { ref, control } = useInViewAnimation();
@@ -14,21 +14,25 @@ export const Contact = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log( import.meta.env.VITE_EMAIL_SERVICE_ID)
-
+    
     emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAIL_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        form.current,
-        import.meta.env.VITE_PUBLIC_KEY
+    .sendForm(
+      import.meta.env.VITE_EMAIL_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         (result) => {
-          console.log(result);
+          toast.success("Email sent successfully");
+          console.log(result.text);
+          setEmail("");
+          setMessage("");
+          setName("");
         },
         (error) => {
           console.log(error.text);
+          toast.error("Some Internal error! Please try later.");
         }
       );
   };

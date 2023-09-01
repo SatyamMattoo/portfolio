@@ -60,7 +60,7 @@
 }
 
 .nav-gradient {
-  background: rgb(14, 18, 37,.9);
+  background: rgb(14, 18, 37, 0.9);
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 0%,
@@ -71,10 +71,10 @@
 
 .card-gradient {
   background: rgb(244, 244, 246);
-  background: linear-gradient(158deg, rgb(0, 0, 0) 25%,  rgb(14, 18, 37) 100%);
+  background: linear-gradient(158deg, rgb(0, 0, 0) 25%, rgb(14, 18, 37) 100%);
 }
 
-.btn{
+.btn {
   width: 6rem;
   height: 20px;
   border-radius: 10px;

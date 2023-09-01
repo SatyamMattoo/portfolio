@@ -13,7 +13,9 @@ export const Socials = () => {
               } ${item.colorHover ? item.colorHover : "hover:text-red-600"}`}
               key={index}
             >
-              <a href={item.href} target="blank">{item.icon}</a>
+              <a href={item.href} target="blank">
+                {item.icon}
+              </a>
             </li>
           );
         })}

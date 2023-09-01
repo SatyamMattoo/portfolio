@@ -6,8 +6,8 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import frontend from "./tech/frontend.png"
-import backend from "./tech/backend.png"
+import frontend from "./tech/frontend.png";
+import backend from "./tech/backend.png";
 
 import logo from "./logos/logo.png";
 import smLogo from "./logos/sm-logo.png";
