@@ -24,7 +24,7 @@ export const Contact = () => {
       )
       .then(
         (result) => {
-          toast.success("Email sent successfully");
+          toast.success("Email sent successfully!");
           console.log(result.text);
           setEmail("");
           setMessage("");
