@@ -9,9 +9,9 @@ import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
 import { Toaster } from "react-hot-toast";
 
-
 const App = () => {
-  return (<>
+  return (
+    <>
       <Header />
       <Hero />
       <About />
@@ -20,9 +20,8 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
-      <Toaster/>
-  </>
-
+      <Toaster />
+    </>
   );
 };
 

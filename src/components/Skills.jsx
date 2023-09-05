@@ -7,7 +7,7 @@ export const Skills = () => {
     <section className="bg-gradient">
       <div className="container mx-auto p-4">
         <div>
-          <h2 className="text-3xl text-center text-fuchsia-400">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
             Technologies
           </h2>
         </div>

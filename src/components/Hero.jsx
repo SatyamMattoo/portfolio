@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { Sphere } from "@react-three/drei/core";
 import { MeshDistortMaterial } from "@react-three/drei/core";
 import { motion } from "framer-motion";
-import { boxVariant } from "../utils/BoxVarient";
+import { boxVariant1 } from "../utils/BoxVarient";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
 
 export const Hero = () => {
@@ -20,7 +20,7 @@ export const Hero = () => {
         <motion.div
           className="content-wrapper flex items-center"
           ref={ref}
-          variants={boxVariant}
+          variants={boxVariant1}
           initial="hidden"
           animate={control}
         >

@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { Sphere } from "@react-three/drei/core";
 import { MeshDistortMaterial } from "@react-three/drei/core";
 import { useInViewAnimation } from "../hooks/useInViewAnimation";
-import { boxVariant } from "../utils/BoxVarient";
+import { boxVariant1 } from "../utils/BoxVarient";
 import { my } from "../assets";
 
 export const About = () => {
@@ -20,7 +20,7 @@ export const About = () => {
         <motion.div
           className="flex items-center h-full"
           ref={ref}
-          variants={boxVariant}
+          variants={boxVariant1}
           initial="hidden"
           animate={control}
         >
@@ -43,9 +43,11 @@ export const About = () => {
               </Sphere>
             </Canvas>
           </div>
-          <div className="w-1 mr-8 h-[480px] md:h-96 bg-gradient-to-br from-violet-500 via-pink-500 to-red-500"></div>
+          <div className="w-1 mr-8 h-[400px] md:h-96 bg-gradient-to-br from-violet-500 via-pink-500 to-red-500"></div>
           <div className="text-content">
-            <h1 className="text-4xl mb-8 text-fuchsia-400">About me</h1>
+            <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-start md:text-center text-white">
+              About me
+            </h1>
             <p className="pb-4 max-w-[480px] text-lg text-left">
               Hey there! I'm a third-year BTech graduate who thrives as a Full
               Stack Developer. I've sculpted captivating and responsive websites

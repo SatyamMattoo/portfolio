@@ -10,7 +10,7 @@ export const Header = () => {
         <img
           src={logo}
           alt=""
-          className="inset-0 h-20 w-[10rem] object-cover hidden lg:block"
+          className="inset-0 h-[4rem] w-[12rem] object-cover hidden lg:block"
         />
         <img
           src={smLogo}

@@ -4,10 +4,10 @@ import { Socials } from "./Socials";
 
 export const Footer = () => {
   return (
-    <footer className="nav-gradient md:h-[140px]">
+    <footer className="nav-gradient md:h-[130px]">
       <div className="container mx-auto p-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <img src={smLogo} alt="" className="hidden lg:block" />
+          <img src={smLogo} alt="" className="hidden lg:block h-24 " />
           <div className="address self-start md:self-center">
             <p>Kangra, Himachal Pradesh</p>
             <p>India</p>
