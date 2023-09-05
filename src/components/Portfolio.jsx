@@ -9,7 +9,7 @@ export const Portfolio = () => {
   const { ref, control } = useInViewAnimation();
 
   return (
-    <section id="portfolio" className=" h-screen flex item-center justify-center bg-gradient p-4">
+    <section id="portfolio" className=" h-screen flex items-center justify-center bg-gradient p-4">
       <div className="container mx-auto">
         <motion.div
           className="flex item-center justify-center flex-col "
