@@ -46,7 +46,7 @@ export const Contact = () => {
         initial="hidden"
         animate={control}
       >
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
+        <h2 className="m-4 text-4xl tracking-tight font-extrabold text-center text-white">
           Contact Me
         </h2>
         <div className="w-[90vw] md:w-[70%] m-4 py-4 card-gradient rounded-[20px]">

@@ -10,8 +10,8 @@ export const Card = ({
   about,
 }) => {
   return (
-    <div className="lg:w-[45%] w-[80%] m-1 md:m-3 card-gradient p-2 rounded-[20px]">
-      <div className=" rounded-[20px] p-2 md:py-5 md:px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+    <div className="lg:w-[45%] w-[100%] m-1 md:m-3 card-gradient p-2 rounded-[20px]">
+      <div className=" rounded-[20px] p-2 md:py-5 md:px-12 min-h-[220px] flex justify-evenly items-center flex-col">
         <div className="flex items-center justify-center">
           {icon ? (
             <img

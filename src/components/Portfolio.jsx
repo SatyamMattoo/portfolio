@@ -18,10 +18,10 @@ export const Portfolio = () => {
           initial="hidden"
           animate={control}
         >
-          <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
+          <h1 className="text-4xl tracking-tight font-extrabold text-center text-white">
             Roles
           </h1>
-          <div className="mt-10 flex gap-10 items-center justify-center flex-col md:flex-row mb-10">
+          <div className="mt-5 flex gap-10 items-center justify-center flex-col md:flex-row mb-10">
             {services.map((service, index) => (
               <Card key={service.title} index={index} {...service} />
             ))}
