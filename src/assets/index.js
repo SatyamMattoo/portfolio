@@ -8,6 +8,11 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import frontend from "./tech/frontend.png";
 import backend from "./tech/backend.png";
+import firebase from "./tech/firebase.png";
+import gcs from "./tech/gcs.png";
+import radix from "./tech/radix.png";
+import express from "./tech/express.png";
+import mongo from "./tech/mongo.png";
 
 import logo from "./logos/logo.png";
 import smLogo from "./logos/sm-logo.png";
@@ -23,6 +28,11 @@ export {
   tailwind,
   nodejs,
   git,
+  firebase,
+  gcs,
+  radix,
+  express,
+  mongo,
   logo,
   smLogo,
   my,

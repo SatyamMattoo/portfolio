@@ -11,6 +11,11 @@ import {
   git,
   frontend,
   backend,
+  firebase,
+  express,
+  mongo,
+  radix,
+  gcs,
 } from "../assets";
 
 // navigation
@@ -48,7 +53,7 @@ export const social = [
   },
   {
     icon: <FiLinkedin />,
-    href: "https://www.linkedin.com/in/satyam-mattoo-918933228/",
+    href: "https://www.linkedin.com/in/satyam-mattoo/",
     color: "text-blue-500",
     colorHover: "hover:text-blue-900",
   },
@@ -89,6 +94,26 @@ export const skills = [
     name: "git",
     icon: git,
   },
+  {
+    name: "firebase",
+    icon: firebase,
+  },
+  {
+    name: "express",
+    icon: express,
+  },
+  {
+    name: "mongodb",
+    icon: mongo,
+  },
+  {
+    name: "radix",
+    icon: radix,
+  },
+  {
+    name: "gcs",
+    icon: gcs,
+  },
 ];
 
 export const services = [
@@ -96,17 +121,26 @@ export const services = [
     title: "Frontend Developer",
     icon: frontend,
     description:
-      " | Expertise in React.js, Tailwind CSS, Chakra UI, Framer Motion, and Sass 💻 | Crafting engaging user experiences with a touch of motion magic 🚀 |",
+      " | Expertise in React.js, Next.js, Tailwind CSS, Chakra UI, Radix UI, Framer Motion, and Sass 💻 | Crafting engaging user experiences with a touch of motion magic 🚀 | Utilizing Google Cloud Storage for efficient data handling 🌐 |",
   },
   {
     title: "Backend Developer",
     icon: backend,
     description:
-      "| Specializing in Node.js, Express, and MongoDB ⚙️ | Building robust server-side solutions with a focus on efficiency and scalability 🚀 |",
+      "| Specializing in Node.js, Express, MongoDB, and Google Cloud Storage ⚙️ | Building robust server-side solutions with a focus on efficiency, scalability, and cloud-based data management 🚀 |",
   },
 ];
 
 export const projects = [
+  {
+    title: "E-journal Application",
+    description:
+      "Upload and get your articles reviewed with this website powered by Google Cloud Storage and RTK Query",
+    github: "https://github.com/SatyamMattoo/journal-frontend",
+    app: "https://ejournal-satyam.netlify.app/",
+    about:
+      "https://www.linkedin.com/posts/satyam-mattoo_excited-to-share-my-latest-project-a-ejournal-activity-7127172134501552128-9-3y?utm_source=share&utm_medium=member_desktop",
+  },
   {
     title: "Chat app",
     description:
@@ -119,7 +153,7 @@ export const projects = [
   {
     title: "Task Management Application",
     description:
-      "Stay organized with our MERN-powered task management app! 📝💡 Seamlessly manage tasks while enjoying the convenience of text-to-speech features. Your to-dos just got even easier to handle. 🗣️🚀",
+      "Seamlessly manage tasks while enjoying the convenience of text-to-speech features. Your to-dos just got even easier to handle.",
     github: "https://github.com/SatyamMattoo/todo-frontend",
     app: "https://todo-satyammattoo.netlify.app/",
     about:
