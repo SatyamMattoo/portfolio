@@ -11,7 +11,7 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="h-screen flex bg-gradient items-center justify-center"
+      className="min-h-screen flex bg-gradient items-center justify-center"
     >
       <motion.div
         className="container"
@@ -27,7 +27,7 @@ export const Projects = () => {
           </h1>
           <div className="h-1 w-1/2 self-end mx-8 my-4 bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
-        <div className="mt-10 flex flex-wrap flex-col w-full justify-evenly items-center lg:flex-row mb-10">
+        <div className="mt-10 flex flex-wrap flex-col w-full justify-evenly items-center lg:flex-row mb-10 gap-4">
           {projects.map((projects, index) => (
             <Card key={projects.title} index={index} {...projects} />
           ))}

@@ -11,7 +11,7 @@ export const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className=" h-screen flex items-center justify-center bg-gradient p-4"
+      className="min-h-screen flex items-center justify-center bg-gradient p-4"
     >
       <div className="container mx-auto">
         <motion.div
