@@ -15,7 +15,7 @@ export const Portfolio = () => {
     >
       <div className="container mx-auto">
         <motion.div
-          className="flex item-center justify-center flex-col "
+          className="flex item-center justify-center flex-col card"
           ref={ref}
           variants={boxVariant3}
           initial="hidden"

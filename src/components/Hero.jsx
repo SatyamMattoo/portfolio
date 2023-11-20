@@ -18,7 +18,7 @@ export const Hero = () => {
     >
       <div className="container mx-auto h-full flex justify-center">
         <motion.div
-          className="content-wrapper flex items-center"
+          className="content-wrapper flex items-center card"
           ref={ref}
           variants={boxVariant1}
           initial="hidden"

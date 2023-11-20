@@ -14,7 +14,7 @@ export const Projects = () => {
       className="min-h-screen flex bg-gradient items-center justify-center"
     >
       <motion.div
-        className="container"
+        className="container card"
         ref={ref}
         variants={boxVariant3}
         initial="hidden"

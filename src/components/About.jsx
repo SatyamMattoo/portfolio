@@ -18,7 +18,7 @@ export const About = () => {
     >
       <div className="container mx-auto h-full flex flex-col justify-center  mb-10">
         <motion.div
-          className="flex items-center h-full"
+          className="flex items-center h-full card"
           ref={ref}
           variants={boxVariant1}
           initial="hidden"

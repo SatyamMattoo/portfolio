@@ -41,7 +41,7 @@ export const Contact = () => {
     <section className="h-screen bg-white bg-gradient">
       <div className="container mx-auto">
         <motion.div
-          className="flex flex-col items-center justify-center w-full"
+          className="flex flex-col items-center justify-center w-full  card"
           ref={ref}
           variants={boxVariant2}
           initial="hidden"
