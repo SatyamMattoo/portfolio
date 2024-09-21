@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import {logo} from "../../assets/index"
+import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { logo } from "../../assets/index"
 
 const Footer = () => {
   return (
@@ -9,16 +9,16 @@ const Footer = () => {
         © 2022. All rights reserved by Satyam Mattoo
       </p>
       <div className="flex gap-4">
-          <span className="bannerIcon">
-            <FaFacebookF />
-          </span>
-          <span className="bannerIcon">
-            <FaTwitter />
-          </span>
-          <span className="bannerIcon">
-            <FaLinkedinIn />
-          </span>
-        </div>
+        <a href='https://github.com/SatyamMattoo' className="bannerIcon" target='_blank' rel="noopener noreferrer">
+          <FaGithub />
+        </a>
+        <a href='https://twitter.com/SatyamMattoo07' className="bannerIcon" target='_blank' rel="noopener noreferrer">
+          <FaTwitter />
+        </a>
+        <a href='https://www.linkedin.com/in/satyam-mattoo' className="bannerIcon" target='_blank' rel="noopener noreferrer">
+          <FaLinkedinIn />
+        </a>
+      </div>
     </div>
   );
 }
