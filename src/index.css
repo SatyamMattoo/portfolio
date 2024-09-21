@@ -1,86 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.class {
-  color: rgb(217 70 239);
+@layer components{
+    .bannerIcon{
+        @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
+    }
+    .resumeLi {
+    @apply w-full h-20 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center border-[1px] rounded-none;
+         }
+.bgOpacity {
+@apply bg-black bg-opacity-40;
+                  }
+    .contactInput{
+        @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300
+    }
+.contactTextArea{
+    @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none
+}
 }
 
-@layer base {
-  body {
-    @apply font-body  leading-6 bg-gray-200;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-white font-primary;
-  }
-  p {
-    @apply text-white;
-  }
-  .section {
-    @apply py-12 lg:py-32;
-  }
-  .section-title {
-    @apply text-3xl lg:text-4xl font-medium lg:font-extrabold mb-5;
-  }
-  .subtitle {
-    @apply text-base  mb-16 lg:mb-24 max-w-[520px];
-  }
-  .btn {
-    @apply py-4 px-7 font-medium bg-blue-900 text-white flex items-center justify-center rounded-sm  transition-all;
-  }
-  .input {
-    @apply h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-sm focus:outline focus:outline-1;
-  }
-  .textarea {
-    @apply resize-none w-full outline-none p-6 rounded-sm h-[200px] focus:outline focus:outline-1;
-  }
+.active {
+    color: white;
 }
-
-.bg-gradient {
-  background-image: linear-gradient(
-    to top,
-    #050816,
-    #080b1a,
-    #0a0e1d,
-    #0d1021,
-    #0e1225,
-    #0e1225,
-    #0e1225,
-    #0e1225,
-    #0d1021,
-    #0a0e1d,
-    #080b1a,
-    #050816
-  );
-}
-
-.nav-gradient {
-  background: rgb(14, 18, 37, 0.9);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(13, 18, 45, 0.9) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
-}
-
-.card-gradient {
-  background: rgb(244, 244, 246);
-  background: linear-gradient(158deg, rgb(0, 0, 0) 25%, rgb(14, 18, 37) 100%);
-}
-
-.card{
-  will-change: transform,opacity;
-}
-
-.btn {
-  width: 6rem;
-  height: 20px;
-  border-radius: 10px;
-  margin: auto;
+.scrollbar-hide::-webkit-scrollbar{
+    display: none;
 }
