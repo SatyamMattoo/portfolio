@@ -5,10 +5,9 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();  // Reference for the form
-  
+
   const [formData, setFormData] = useState({
     username: '',
-    phoneNumber: '',
     email: '',
     subject: '',
     message: '',
@@ -35,10 +34,6 @@ const Contact = () => {
       username: {
         isValid: formData.username !== "",
         error: "Username is required!"
-      },
-      phoneNumber: {
-        isValid: formData.phoneNumber !== "",
-        error: "Phone number is required!"
       },
       email: {
         isValid: formData.email !== "",
@@ -128,27 +123,15 @@ const Contact = () => {
                   {successMsg}
                 </p>
               )}
-              <div className="w-full flex flex-col lgl:flex-row gap-10">
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-400 uppercase tracking-wide">Your Name</p>
-                  <input
-                    name="username"
-                    value={formData.username}
-                    onChange={handleInputChange}
-                    className={`contactInput ${errMsg.includes('Username') && 'outline-designColor'}`}
-                    type="text"
-                  />
-                </div>
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-400 uppercase tracking-wide">Phone Number</p>
-                  <input
-                    name="phoneNumber"
-                    value={formData.phoneNumber}
-                    onChange={handleInputChange}
-                    className={`contactInput ${errMsg.includes('Phone number') && 'outline-designColor'}`}
-                    type="text"
-                  />
-                </div>
+              <div className="flex flex-col gap-4">
+                <p className="text-sm text-gray-400 uppercase tracking-wide">Your Name</p>
+                <input
+                  name="username"
+                  value={formData.username}
+                  onChange={handleInputChange}
+                  className={`contactInput ${errMsg.includes('Username') && 'outline-designColor'}`}
+                  type="text"
+                />
               </div>
               <div className="flex flex-col gap-4">
                 <p className="text-sm text-gray-400 uppercase tracking-wide">Email</p>
