@@ -3,8 +3,10 @@ import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 import emailjs from '@emailjs/browser';
 
-const Contact = () => {
-  const form = useRef();  // Reference for the form
+type ValidationKeys = 'username' | 'email' | 'validEmail' | 'subject' | 'message';
+
+const Contact: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null); // Reference for the form
 
   const [formData, setFormData] = useState({
     username: '',
@@ -18,19 +20,19 @@ const Contact = () => {
     successMsg: '',
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const emailValidation = (email) => {
+  const emailValidation = (email: string) => {
     return String(email)
       .toLowerCase()
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
 
   const validateForm = () => {
-    const validations = {
+    const validations: Record<ValidationKeys, { isValid: boolean; error: string }> = {
       username: {
         isValid: formData.username !== "",
         error: "Username is required!"
@@ -40,7 +42,7 @@ const Contact = () => {
         error: "Please provide your Email!"
       },
       validEmail: {
-        isValid: emailValidation(formData.email),
+        isValid: !!emailValidation(formData.email),
         error: "Please provide a valid Email!"
       },
       subject: {
@@ -52,17 +54,21 @@ const Contact = () => {
         error: "Message is required!"
       }
     };
-
+  
     for (let key in validations) {
-      if (!validations[key].isValid) {
-        setMessages({ errMsg: validations[key].error });
+      // Type assertion to satisfy TypeScript
+      const k = key as ValidationKeys;
+      if (!validations[k].isValid) {
+        setMessages({ errMsg: validations[k].error, successMsg: "" });
         return false;
       }
     }
     return true;
   };
+  
+  
 
-  const handleSend = (e) => {
+  const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (validateForm()) {
@@ -70,11 +76,11 @@ const Contact = () => {
         .sendForm(
           import.meta.env.VITE_EMAIL_SERVICE_ID,
           import.meta.env.VITE_TEMPLATE_ID,
-          form.current,
+          form.current!,
           import.meta.env.VITE_PUBLIC_KEY
         )
         .then(
-          (result) => {
+          () => {
             setMessages({
               successMsg: `Thank you dear ${formData.username}, Your message has been sent successfully!`,
               errMsg: ""
@@ -82,7 +88,6 @@ const Contact = () => {
 
             setFormData({
               username: "",
-              phoneNumber: "",
               email: "",
               subject: "",
               message: ""
@@ -160,8 +165,8 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   className={`contactTextArea ${errMsg.includes('Message') && 'outline-designColor'}`}
-                  cols="30"
-                  rows="8"
+                  cols={30}
+                  rows={8}
                 ></textarea>
               </div>
               <div className="w-full">

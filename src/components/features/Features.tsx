@@ -1,12 +1,18 @@
 import React from 'react';
-import { AiFillAppstore } from "react-icons/ai";
+import { MdModelTraining } from 'react-icons/md';
 import { FaMobile, FaGlobe, FaDatabase } from "react-icons/fa";
-import { SiProgress, SiAntdesign, SiFrontendmentor, SiReact, SiTypescript, SiNextdotjs, SiNodedotjs } from "react-icons/si";
 import Title from '../layouts/Title';
 import Card from './Card';
-import { MdModelTraining } from 'react-icons/md';
+import { SiNextdotjs, SiNodedotjs } from "react-icons/si";
 
-const featuresData = [
+// Define the type for features data
+interface Feature {
+  title: string;
+  des: string;
+  icon: JSX.Element;
+}
+
+const featuresData: Feature[] = [
   {
     title: "Frontend Development",
     des: "Responsive interfaces using Next.js, Tailwind CSS, and animations with Framer Motion.",
@@ -34,7 +40,7 @@ const featuresData = [
   }
 ];
 
-const Features = () => {
+const Features: React.FC = () => {
   return (
     <section id="features" className="w-full py-20 border-b-[1px] border-b-black">
       <Title title="Features" des="What I Do" />

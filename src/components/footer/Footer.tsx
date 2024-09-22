@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { logo } from "../../assets/index"
+import { logo } from "../../assets/index";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className="w-full py-10 flex items-center justify-between">
       <p className="text-center text-gray-500 text-base">
@@ -23,4 +23,4 @@ const Footer = () => {
   );
 }
 
-export default Footer
+export default Footer;

@@ -1,7 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const skillsData = [
+// Define the types for the skills data structure
+interface Skill {
+  name: string;
+  percentage: string;
+}
+
+interface SkillsSectionProps {
+  category: string;
+  skills: Skill[];
+}
+
+interface SkillBarProps {
+  name: string;
+  percentage: string;
+}
+
+// Skills data
+const skillsData: SkillsSectionProps[] = [
   {
     category: 'Development Skills',
     skills: [
@@ -20,13 +37,14 @@ const skillsData = [
       { name: 'Python', percentage: '60%' },
       { name: 'RAG', percentage: '80%' },
       { name: 'Vector Databases', percentage: '60%' },
-      { name: 'Embeddding Models', percentage: '85%' },
+      { name: 'Embedding Models', percentage: '85%' },
       { name: 'OpenAI', percentage: '40%' },
     ],
   },
 ];
 
-const SkillBar = ({ name, percentage }) => (
+// SkillBar component
+const SkillBar: React.FC<SkillBarProps> = ({ name, percentage }) => (
   <div className="overflow-x-hidden">
     <p className="text-sm uppercase font-medium">{name}</p>
     <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
@@ -43,7 +61,8 @@ const SkillBar = ({ name, percentage }) => (
   </div>
 );
 
-const SkillsSection = ({ category, skills }) => (
+// SkillsSection component
+const SkillsSection: React.FC<SkillsSectionProps> = ({ category, skills }) => (
   <div className="w-full lgl:w-1/2">
     <div className="py-12 font-titleFont flex flex-col gap-4">
       <p className="text-sm text-designColor tracking-[4px] uppercase">
@@ -59,7 +78,8 @@ const SkillsSection = ({ category, skills }) => (
   </div>
 );
 
-const Skills = () => {
+// Main Skills component
+const Skills: React.FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

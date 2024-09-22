@@ -2,8 +2,22 @@ import React from "react";
 import { motion } from "framer-motion";
 import ResumeCard from "./ResumeCard";
 
+// Define the structure of the educationData
+interface EducationRecord {
+  title: string;
+  subTitle: string;
+  result: string;
+  des: string;
+}
+
+interface EducationSection {
+  sectionTitle: string;
+  timePeriod: string;
+  records: EducationRecord[];
+}
+
 // Education data array
-const educationData = [
+const educationData: EducationSection[] = [
   {
     sectionTitle: "Graduation",
     timePeriod: "(2021 - 2025)",
@@ -36,7 +50,7 @@ const educationData = [
   },
 ];
 
-const Education = () => {
+const Education: React.FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -49,7 +63,9 @@ const Education = () => {
             <p className="text-sm text-designColor tracking-[4px]">
               {section.timePeriod}
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold">{section.sectionTitle}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              {section.sectionTitle}
+            </h2>
           </div>
           <div className="mt-6 lgl:mt-14 w-full h-[600px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
             {section.records.map((record, i) => (
@@ -67,5 +83,6 @@ const Education = () => {
     </motion.div>
   );
 };
+
 
 export default Education;

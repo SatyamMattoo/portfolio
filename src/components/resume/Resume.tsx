@@ -5,8 +5,8 @@ import Skills from './Skills';
 import Achievement from './Achievement';
 import Experience from './Experience';
 
-const Resume = () => {
-  const [activeTab, setActiveTab] = useState('experience');
+const Resume: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string>('experience');
 
   const tabs = [
     { label: 'Experience', value: 'experience' },

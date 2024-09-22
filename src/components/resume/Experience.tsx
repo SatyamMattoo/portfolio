@@ -2,8 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import ResumeCard from "./ResumeCard";
 
+interface Experience {
+  title: string;
+  subTitle: string;
+  result: string;
+  des: string;
+}
+
 // Job experience data array
-const experienceData = [
+const experienceData : Experience[] = [
   {
     title: "Software Developer Intern",
     subTitle: "Open Function (July 2024 - September 2024)",
@@ -26,7 +33,7 @@ const experienceData = [
   },
 ];
 
-const Experience = () => {
+const Experience : React.FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

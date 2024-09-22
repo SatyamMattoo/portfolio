@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import { logo } from "../../assets/index"
-import { navLinksdata } from '../../constants';
+import { logo } from "../../assets/index";
+import { navLinksdata } from '../../constants/index';
 
-const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false)
+// Define type for nav link data
+interface NavLink {
+  _id: number;
+  title: string;
+  link: string;
+}
+
+const Navbar: React.FC = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div>
@@ -15,7 +23,7 @@ const Navbar = () => {
       </div>
       <div>
         <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
-          {navLinksdata.map(({ _id, title, link }) => (
+          {navLinksdata.map(({ _id, title, link }: NavLink) => (
             <li
               className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
               key={_id}
@@ -51,7 +59,7 @@ const Navbar = () => {
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
-                {navLinksdata.map((item) => (
+                {navLinksdata.map((item: NavLink) => (
                   <li
                     key={item._id}
                     className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
@@ -98,6 +106,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
