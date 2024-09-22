@@ -5,7 +5,7 @@ import { SiNextdotjs, SiTypescript, SiDocker, SiPython } from "react-icons/si";
 
 const LeftBanner: React.FC = () => {
   const [text] = useTypewriter({
-    words: ["Software Engineer", "Full Stack Developer.", "Tech Enthusiast."],
+    words: ["Software Engineer.", "Full Stack Developer.", "Tech Enthusiast."],
     loop: true,
     typeSpeed: 20,
     deleteSpeed: 10,
