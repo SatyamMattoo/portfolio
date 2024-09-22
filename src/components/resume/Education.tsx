@@ -67,7 +67,7 @@ const Education: React.FC = () => {
               {section.sectionTitle}
             </h2>
           </div>
-          <div className="mt-6 lgl:mt-14 w-full h-[600px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+          <div className="mt-6 lgl:mt-14 w-full border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
             {section.records.map((record, i) => (
               <ResumeCard
                 key={i}

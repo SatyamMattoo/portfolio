@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { logo } from "../../assets/index";
-import { navLinksdata } from '../../constants/index';
+import { navLinksdata } from "../../constants/index";
 
 // Define type for nav link data
 interface NavLink {
@@ -53,9 +53,9 @@ const Navbar: React.FC = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Earum soluta perspiciatis molestias enim cum repellat, magnam
-                  exercitationem distinctio aliquid nam.
+                  A Full Stack Developer with experience in building MERN stack
+                  and NextJS websites. I am passionate about creating efficient,
+                  scalable, and user-friendly applications.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -83,15 +83,30 @@ const Navbar: React.FC = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4">
-                  <span className="bannerIcon">
-                    <FaFacebookF />
-                  </span>
-                  <span className="bannerIcon">
+                  <a
+                    href="https://github.com/SatyamMattoo"
+                    className="bannerIcon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub />
+                  </a>
+                  <a
+                    href="https://twitter.com/SatyamMattoo07"
+                    className="bannerIcon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaTwitter />
-                  </span>
-                  <span className="bannerIcon">
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/satyam-mattoo"
+                    className="bannerIcon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaLinkedinIn />
-                  </span>
+                  </a>
                 </div>
               </div>
               <span

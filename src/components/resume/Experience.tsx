@@ -44,7 +44,7 @@ const Experience : React.FC = () => {
         <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
           <h2 className="text-3xl md:text-4xl font-bold">Job Experience</h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[800px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 lgl:mt-14 w-full border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           {experienceData.map((job, index) => (
             <ResumeCard
               key={index}

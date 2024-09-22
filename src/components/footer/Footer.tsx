@@ -3,7 +3,7 @@ import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <div className="w-full py-10 flex items-center justify-between">
+    <div className="w-full py-10 flex flex-col md:flex-row items-center justify-between gap-4">
       <p className="text-center text-gray-500 text-base">
         © 2022. All rights reserved by Satyam Mattoo
       </p>

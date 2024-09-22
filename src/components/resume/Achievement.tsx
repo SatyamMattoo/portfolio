@@ -38,7 +38,7 @@ const Achievement: React.FC = () => {
             Programs and Open Source
           </h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[800px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 lgl:mt-14 w-full border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           {achievements.map((achievement, index) => (
             <ResumeCard
               key={index}
