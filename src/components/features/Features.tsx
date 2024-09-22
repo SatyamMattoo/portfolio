@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdModelTraining } from 'react-icons/md';
-import { FaMobile, FaGlobe, FaDatabase } from "react-icons/fa";
+import { FaGlobe, FaDatabase } from "react-icons/fa";
 import Title from '../layouts/Title';
 import Card from './Card';
 import { SiNextdotjs, SiNodedotjs } from "react-icons/si";
