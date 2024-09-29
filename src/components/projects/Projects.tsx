@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../layouts/Title';
-import { projectOne, projectTwo } from "../../assets/index.ts";
+import { projectOne, projectThree, projectTwo } from "../../assets/index.ts";
 import ProjectsCard from './ProjectsCard';
 
 // Define the type for project data
@@ -15,9 +15,18 @@ interface ProjectData {
 // Array to hold project details from resume
 const projectsData: ProjectData[] = [
   {
+    title: "CLI Tool - Markdown to HTML",
+    description: `Created a Typescript CLI tool that allows you to convert single or multiple Markdown files to HTML.
+                  This tool includes features like automatic conversion of Markdown files on save along with custom CSS 
+                  implementation and live preview of the converted HTML.`,
+    src: projectThree,
+    github: "https://github.com/SatyamMattoo/cli-mth",
+    live: "https://www.npmjs.com/package/mth-live-cli"
+  },
+  {
     title: "E-Journal Management Website",
-    description: `Tech Stack: MERN stack with RTK Query for optimized performance.
-                  Achievements: Successfully built a full-fledged web application emphasizing user interaction and efficient publication workflows. 
+    description: `MERN stack with RTK Query for optimized performance.
+                  Successfully built a full-fledged web application emphasizing user interaction and efficient publication workflows. 
                   Expanded expertise in handling complex workflows and optimizing user experiences with RTK Query and GCS.`,
     src: projectOne,
     github: "https://github.com/SatyamMattoo/journal-backend",
@@ -25,8 +34,8 @@ const projectsData: ProjectData[] = [
   },
   {
     title: "Real-Time Chat App",
-    description: `Tech Stack: React.js and Chakra UI for sleek design and responsiveness. Backend powered by Google Firebase for secure chat storage and real-time messaging.
-                  Achievements: Successfully launched a dynamic chat app emphasizing user-friendly design and real-time communication. 
+    description: `React.js and Chakra UI for sleek design and responsiveness. Backend powered by Google Firebase for secure chat storage and real-time messaging.
+                  Successfully launched a dynamic chat app emphasizing user-friendly design and real-time communication. 
                   Expanded proficiency in real-time messaging protocols and Firebase security practices.`,
     src: projectTwo,
     github: "https://github.com/SatyamMattoo/chat-app",
